@@ -53,7 +53,9 @@ module VGAMod
         else if(  LineCount  == LineForVS  ) begin
             LineCount       <=  16'b0;
             PixelCount      <=  16'b0;
-            end
+        end else begin
+            PixelCount       <=  PixelCount + 1'b1;
+        end
     end
 
 	reg			[9:0]  Data_R;
